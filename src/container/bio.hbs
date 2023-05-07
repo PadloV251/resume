@@ -1,0 +1,174 @@
+<hr>
+<header>
+    <section>
+        <div>
+            {{> title data="Bio" big=true}}
+            <h3><strong>{{name}}</strong></h3>
+            <div>
+                <em>Народився: {{birthdate}}</em>
+            </div>
+            <div>
+                <em>В мiстi: {{birthplace}}</em>
+            </div>
+            <div>
+                <em>Помер/в мiстi: {{deathdate}} / {{deathplace}}</em>
+            </div>
+            <div>
+                <em>Національність: {{nationality}}</em>
+            </div>
+            <div>
+                <em>Професія: {{occupation}}</em>
+            </div>
+        </div>
+    </section>
+</header>
+
+<hr>
+
+<main>
+    <section>
+        <div>
+            {{> title data="Known for" big=false}}
+            <ul>
+                {{#each known_for}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            {{> title data="Education" big=false}}
+            <ul>
+                {{#each education}}
+                    <li>
+                        <div>
+                            <p>Посада: {{degree}} - {{field}}</p>
+                            
+                            <p>Навчався: {{institution}} {{year}} року</p>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            {{> title data="Notable publications" big=false}}
+            <ul>
+                {{#each notable_publications}}
+                    <li>
+                        <div>
+                            <p>Назва: {{title}} {{year}} року</p>
+                            <p>Видавець: {{publisher}}</p>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            {{> title data="Partners" big=false}}
+            <ul>
+                {{#each partners}}
+                    <li>
+                        <div>
+                            <p>Ім'я: {{name}} | Відносини: {{relationship}}</p>
+                            <p>Були разом: {{years}}</p>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            {{> title data="Awards" big=false}}
+            <ul>
+                {{#each awards}}
+                    <li>
+                        <div>
+                            <p>{{title}} отримав в {{year}}</p>
+                            <p>{{description}}</p>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            {{> title data="Influences" big=false}}
+            <ul>
+                {{#each influences}}
+                    <li>
+                        <div>
+                            {{this}}
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+            <br>
+            {{> title data="Influenced" big=false}}
+            <ul>
+                {{#each influenced}}
+                    <li>
+                        <div>
+                            {{this}}
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+            <br>
+            {{> title data="Quotes" big=false}}
+            <ul>
+                {{#each quotes}}
+                    <li>
+                        <div>
+                            {{this}}
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            {{> title data="Major discoveries" big=false}}
+            <ul>
+                {{#each major_discoveries}}
+                    <li>
+                        <div>
+                            <p>{{title}} в {{year}}</p>
+                            <p>{{description}}</p>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            {{> title data="Contributions" big=false}}
+            {{#with contributions}}
+                <em>
+                    {{title}}
+                    <br>
+                    <br>
+                    {{description}}
+                    <br>
+                    <br>
+                    {{field}}
+                </em>
+            {{/with}}
+        </div>
+    </footer>
+</main>
