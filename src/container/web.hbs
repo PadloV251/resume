@@ -1,0 +1,77 @@
+{{#with web}}
+    <hr>
+    <main>
+        <section>
+            {{> title data="Web" big=true}}
+            <div>
+                <ul>
+                    {{#each languages}}
+                        <li>
+                            <div>
+                                <p>{{name}} <b>version</b> - {{version}} ({{description}})</p>
+                            </div>
+                        </li>
+                        <ul>
+                            {{#each elements}}
+                                <li>
+                                    <div>
+                                        <p><b>{{name}}</b></p>
+                                        <p><b>{{description}}</b></p>
+                                    </div>
+                                </li>
+                                <ul>
+                                    {{#each attributes}}
+                                        <li>
+                                            <div>
+                                                <p>{{name}} - ({{description}})</p>
+                                            </div>
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            {{/each}}
+                        </ul>
+                        <ul>
+                            {{#each properties}}
+                                <li>
+                                    <div>
+                                        <p><b>{{name}}</b></p>
+                                        <p><b>{{description}}</b></p>
+                                    </div>
+                                </li>
+                                <ul>
+                                    {{#each values}}
+                                        <li>
+                                            <div>
+                                                <p>{{value}} - ({{description}})</p>
+                                            </div>
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            {{/each}}
+                        </ul>
+                        <ul>
+                            {{#each functions}}
+                                <li>
+                                    <div>
+                                        <p><b>{{name}}</b></p>
+                                        <p><b>{{description}}</b></p>
+                                    </div>
+                                </li>
+                                <ul>
+                                    {{#each parameters}}
+                                        <li>
+                                            <div>
+                                                <p>{{name}} - {{type}}</p>
+                                                <p>{{description}}</p>
+                                            </div>
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            {{/each}}
+                        </ul>
+                    {{/each}}
+                </ul>
+            </div>
+        </section>
+    </main>
+{{/with}}
