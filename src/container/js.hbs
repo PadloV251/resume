@@ -1,0 +1,79 @@
+<hr>
+<main>
+    <section>
+        <div>
+            <h2>{{name}}</h2>
+            <p class="badge text-bg-dark">{{description}}</p>
+        </div>
+        {{#with history}}
+            <div>
+                <p class="badge text-bg-dark">{{year}} - Рiк створення</p>
+                <p class="badge text-bg-dark">{{founder}} - Засновник</p>
+            </div>
+        {{/with}}
+        <ul>
+            {{#each types}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul>
+        <hr>
+        <br>
+        {{> title data="Syntax" big=false}}
+        <br>
+        {{#with syntax}}
+            <div>
+                <p class="badge rounded-pill text-bg-info">{{variables}}</p>
+                <p class="badge rounded-pill text-bg-info">{{functions}}</p>
+                <p class="badge rounded-pill text-bg-info">{{conditionals}}</p>
+                <p class="badge rounded-pill text-bg-info">{{loops}}</p>
+                <p class="badge rounded-pill text-bg-info">{{classes}}</p>
+            </div>
+        {{/with}}
+        <hr>
+        <br>
+        {{> title data="Features" big=false}}
+        <br>
+        <ul>
+            {{#each features}}
+                <li>
+                    {{this}}
+                </li>
+            {{/each}}
+        </ul>
+        <hr>
+        <br>
+        {{> title data="Libraries" big=false}}
+        <br>
+        <ul class="breadcrumb">
+            {{#each libraries}}
+                <li class="breadcrumb-item">
+                    <button class="btn btn-outline-info btn-sm">{{this}}</button>
+                </li>
+            {{/each}}
+        </ul>
+        <hr>
+        <br>
+        {{> title data="Tools" big=false}}
+        <br>
+        <ul>
+            {{#each tools}}
+                <li>
+                    <button class="btn btn-danger btn-sm">{{this}}</button>
+                </li>
+            {{/each}}
+        </ul>
+        <hr>
+        <br>
+        {{> title data="Community" big=false}}
+        <br>
+        <ul>
+            {{#each community}}
+                <li>
+                    <button class="btn btn-outline-secondary btn-sm">{{name}}</button>
+                    <br>
+                    <h5>{{type}}</h5>
+                </li>
+            {{/each}}
+        </ul>
+    </section>
+</main>
