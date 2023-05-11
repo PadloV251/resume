@@ -1,0 +1,83 @@
+<main>
+    <section>
+        {{#with heading}}
+            {{#with main}}
+                <h1>{{title}}</h1>
+                <p>{{text}}</p>
+                {{#with button_text}}
+                    <button class="btn btn-primary">{{solid}}</button>
+                    <br>
+                    <br>
+                    <button class="btn btn-outline-primary">{{outline}}</button>
+                    <hr>
+                {{/with}}
+            {{/with}}
+                {{#with second}}
+                    <h2>{{title}}</h2>
+                    <p>{{text}}</p>
+                    {{#with button_text}}
+                        <button class="btn btn-secondary">{{solid}}</button>
+                        <br>
+                        <br>
+                        <button class="btn btn-outline-secondary">{{outline}}</button>
+                        <hr>
+                    {{/with}}
+                {{/with}}
+                {{#with subblock}}
+                    <h3>{{title}}</h3>
+                    <p>{{text}}</p>
+                    {{#with button_text}}
+                        <button class="btn btn-dark">{{solid}}</button>
+                        <br>
+                        <br>
+                        <button class="btn btn-outline-dark">{{outline}}</button>
+                        <hr>
+                    {{/with}}
+                {{/with}}
+        {{/with}}
+
+        {{#with nested_display}}
+            <div class="display-1">
+                {{title}}
+            </div>
+            <br>
+            {{#with children_display}}
+                <div class="card">
+                    <div class="card-body">
+                        <div class="display-4">
+                            {{title}}
+                        </div>
+                        <p>{{text}}</p>
+                        {{#with button}}
+                            <button class="btn btn-outline-warning">{{text}}</button>
+                        {{/with}}
+                    </div>
+                </div>
+            {{/with}}
+            <br>
+            <h6>{{header_text}}</h6>
+            <br>
+            <button class="btn btn-info">{{button.text}}</button>
+            <hr>
+        {{/with}}
+        <br>
+        <br>
+
+        {{#with paragraph}}
+            <p class="text-uppercase">{{title}}</p>
+            <br>
+            <p class="text-lowercase">{{text}}</p>
+            <br>
+            {{#with button}}
+                <button class="btn btn-link"><a href="{{url}}">{{text}}</a></button>
+            {{/with}}
+            <br>
+            <br>
+            <ul>
+                {{#each list_name}}
+                    <li><button class="btn btn-link"><a href="{{url}}">{{text}}</a></button></li>
+                {{/each}}
+            </ul>
+        {{/with}}
+    </section>
+</main>
