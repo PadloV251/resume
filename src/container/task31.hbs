@@ -163,27 +163,31 @@
         <h5>{{title}}</h5>
         <br>
         <div class="row">
-            <ul>
-                {{#each navigation}}
-                    <div class="col-3">
-                        <li><a href="{{href}}" class="btn btn-link">{{text}}</a></li>
-                    </div>
-                {{/each}}
-            </ul>
-            <ul>
-                {{#each socialMedia}}
-                    <div class="col-3">
-                        <li><a href="link" class="btn btn-outline-dark">{{name}}</a></li>
-                    </div>
-                {{/each}}
-            </ul>
-            <ul>
-                {{#each partners}}
-                    <div class="col-3">
-                        <li><a href="{{link}}" class="btn btn-outline-info">{{name}}</a></li>
-                    </div>
-                {{/each}}
-            </ul>
+            <div class="col-3">
+                <ul>
+                    {{#each navigation}}
+                            <li><a href="{{href}}" class="btn btn-link">{{text}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="col-3">
+                <ul>
+                    {{#each socialMedia}}
+                        <div class="col-3">
+                            <li><a href="link" class="btn btn-outline-dark">{{name}}</a></li>
+                        </div>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="col-3">
+                <ul>
+                    {{#each partners}}
+                        <div class="col-3">
+                            <li><a href="{{link}}" class="btn btn-outline-info">{{name}}</a></li>
+                        </div>
+                    {{/each}}
+                </ul>
+            </div>
         </div>
     {{/with}}
 </main>
