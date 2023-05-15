@@ -101,16 +101,20 @@
             </div>
         {{/with}}
         <hr class="my-5">
-        {{#each footer}}
-            <div class="col-2 mt-5">
-                <ul>
-                    {{#each this}}
-                        <li class="m-3">
-                            <a href="{{link}}" class="btn btn-link {{#if @last}}disabled{{/if}}" >{{text}}</a>
+        <div class="row">
+            {{#each footer}}
+                <div class="col-2 list-group">
+                    <ul class="nav flex-column">
+                        {{#each this}}
+                        <li class="nav-item my-2">
+                            <a href="{{link}}" class="nav-link {{#if @last}}disabled{{/if}} list-item" target="_blank">
+                                {{text}}
+                            </a>
                         </li>
-                    {{/each}}
-                </ul>
-            </div>
-        {{/each}}
+                        {{/each}}
+                    </ul>
+                </div>
+            {{/each}}
+        </div>
     </div>
 </main>
